@@ -9,9 +9,10 @@ import {
 
 import {
   SiVite,
-  SiVisualstudiocode,
   SiTailwindcss,
 } from "react-icons/si";
+
+import { VscVscode } from "react-icons/vsc";
 
 const skills = [
   {
@@ -29,7 +30,7 @@ const skills = [
       { name: "Git", icon: FaGitAlt },
       { name: "GitHub", icon: FaGithub },
       { name: "Vite", icon: SiVite },
-      { name: "VS Code", icon: SiVisualstudiocode },
+      { name: "VS Code", icon: VscVscode },
     ],
   },
   {
