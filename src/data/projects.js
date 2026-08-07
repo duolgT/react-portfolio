@@ -1,6 +1,6 @@
 import portfolioImg from "../assets/personal.png";
 import hotelImg from "../assets/Hotel.png";
-import todoImg from "../assets/todo.png";
+import todoImg from "../assets/Nyirol_website.png";
 
 const projects = [
   {
@@ -25,12 +25,12 @@ const projects = [
   },
   {
     id: 3,
-    title: "To-Do App",
+    title: "Nyirol Website",
     description:
-      "A task management application with Local Storage support.",
+      "A website for Nyirol, a community organization, built with React and featuring a modern design.",
     image: todoImg,
-    technologies: ["React", "Local Storage", "JavaScript"],
-    github: "#",
+    technologies: ["HTML", "JavaScript", "CSS"],
+    github: "https://github.com/Nyirol-Institute/website.git",
     demo: "#",
   },
 ];
