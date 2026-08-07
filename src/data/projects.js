@@ -1,4 +1,4 @@
-import portfolioImg from "../assets/portfolio.png";
+import portfolioImg from "../assets/personal.png";
 import hotelImg from "../assets/Hotel.png";
 import todoImg from "../assets/todo.png";
 
