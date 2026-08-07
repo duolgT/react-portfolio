@@ -1,5 +1,5 @@
 import portfolioImg from "../assets/portfolio.png";
-import weatherImg from "../assets/weather.png";
+import hotelImg from "../assets/Hotel.png";
 import todoImg from "../assets/todo.png";
 
 const projects = [
@@ -15,12 +15,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Weather App",
+    title: "Hotel Booking Website",
     description:
-      "Weather application using a public API to display real-time weather information.",
-    image: weatherImg,
+      "A hotel booking website that allows users to search and book hotels with ease.",
+    image: hotelImg,
     technologies: ["React", "API", "CSS"],
-    github: "#",
+    github: "https://github.com/duolgT/grand-plaza-booking-hotel.git",
     demo: "#",
   },
   {

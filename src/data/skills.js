@@ -31,6 +31,7 @@ const skills = [
       { name: "GitHub", icon: FaGithub },
       { name: "Vite", icon: SiVite },
       { name: "VS Code", icon: VscVscode },
+    
     ],
   },
   {
