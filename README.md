@@ -6,7 +6,7 @@ A modern, responsive personal portfolio website built with **React**, **Vite**, 
 
 > Add your deployed portfolio URL here after deployment.
 
-**Live Site:** `https://your-portfolio-url.vercel.app`
+**Live Site:** `react-portfolio-five-neon.vercel.app`
 
 ## 📂 GitHub Repository
 
@@ -104,7 +104,7 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 ## 📸 Screenshots
 
-Add screenshots of your portfolio here after deployment.
+<img width="1342" height="603" alt="personal" src="https://github.com/user-attachments/assets/573b072a-d6aa-466a-9db1-2a1194a6ba57" />
 
 ---
 
@@ -125,8 +125,8 @@ Add screenshots of your portfolio here after deployment.
 **Duol Daniel Gatbel**
 
 * GitHub: https://github.com/duolgT
-* LinkedIn: *Add your LinkedIn profile link*
-* Email: *Add your email address*
+* LinkedIn: https://www.linkedin.com/in/duol-daniel-gatbel-b659a3268/
+* Email: duolkuach100@gmail.com
 
 ---
 
