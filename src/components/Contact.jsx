@@ -29,7 +29,19 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      const contentType = response.headers.get("content-type");
+
+      let result = {};
+
+      if (contentType && contentType.includes("application/json")) {
+        result = await response.json();
+      } else {
+        const text = await response.text();
+
+        result = {
+          error: text || "The server returned an empty response.",
+        };
+      }
 
       if (!response.ok) {
         throw new Error(result.error || "Failed to send message.");
