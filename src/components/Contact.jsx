@@ -1,50 +1,73 @@
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const Contact = () => {
-  const form = useRef();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const [status, setStatus] = useState("");
 
-  const sendEmail = (e) => {
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const sendEmail = async (e) => {
     e.preventDefault();
+    setStatus("Sending...");
 
-console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID);
-console.log(import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => {
-        setStatus("✅ Message sent successfully!");
-        form.current.reset();
-      })
-      .catch((error) => {
-        console.error(error);
-        setStatus("❌ Failed to send message.");
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message.");
+      }
+
+      setStatus("✅ Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      setStatus(`❌ ${error.message}`);
+    }
   };
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact">
       <h2>Contact Me</h2>
 
-      <form ref={form} onSubmit={sendEmail}>
+      <form onSubmit={sendEmail}>
         <input
           type="text"
-          name="user_name"
+          name="name"
           placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
           required
         />
 
         <input
           type="email"
-          name="user_email"
+          name="email"
           placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
           required
         />
 
@@ -52,6 +75,8 @@ console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
           name="message"
           rows="6"
           placeholder="Your Message"
+          value={formData.message}
+          onChange={handleChange}
           required
         />
 
