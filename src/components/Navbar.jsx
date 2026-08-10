@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="logo">
-        <h2>Duol.dev</h2>
+        <h2>DuolWeb.Dev</h2>
       </div>
 
       <nav className={menuOpen ? "nav active" : "nav"}>

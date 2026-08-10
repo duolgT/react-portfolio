@@ -27,7 +27,7 @@ const projects = [
     id: 3,
     title: "Nyirol Website",
     description:
-      "A website for Nyirol, a community organization, built with React and featuring a modern design.",
+      "A website for Nyirol, a community organization, built with Javascript and featuring a modern design.",
     image: todoImg,
     technologies: ["HTML", "JavaScript", "CSS"],
     github: "https://github.com/Nyirol-Institute/website.git",
