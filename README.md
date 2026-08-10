@@ -1,66 +1,84 @@
-# 🌐 React Portfolio
+# React Portfolio
 
-A modern, responsive personal portfolio website built with **React**, **Vite**, **HTML**, **CSS**, and **JavaScript**. This portfolio showcases my skills, projects, and provides an easy way for recruiters and collaborators to get in touch.
+A modern, responsive personal portfolio website built with **React.js** and **Vite** to showcase my frontend development skills, projects, experience, and contact information.
 
 ## 🚀 Live Demo
 
-> Add your deployed portfolio URL here after deployment.
+**Live Website:** https://react-portfolio-five-neon.vercel.app/
 
-**Live Site:** `react-portfolio-five-neon.vercel.app`
+**GitHub Repository:** https://github.com/duolgT/react-portfolio
 
-## 📂 GitHub Repository
+## 👨‍💻 About the Project
 
-https://github.com/duolgT/react-portfolio
+This portfolio was created to present my work as a junior frontend developer and provide an easy way for potential employers, clients, and collaborators to learn more about my skills and experience.
 
----
+The website focuses on responsive design, clean user interfaces, reusable React components, and modern frontend development practices.
 
 ## ✨ Features
 
-* 📱 Fully responsive design
-* 🌙 Dark/Light mode
-* 🧑‍💻 Professional hero section
-* 👤 About Me section
-* 💡 Skills section with technology icons
-* 📁 Projects showcase
-* 📧 Contact form powered by EmailJS
-* 🔗 Social media links
-* ⚡ Built with React and Vite
-* 🎨 Clean and modern user interface
-
----
+* Responsive design for desktop, tablet, and mobile devices
+* Professional landing/hero section
+* Animated typing effect
+* Dark/light mode
+* Mobile hamburger navigation
+* Scroll reveal animations
+* About Me section
+* Skills section with technology icons
+* Animated skills/proficiency indicators
+* Projects showcase
+* Reusable project cards
+* GitHub and live-demo links
+* Functional contact form
+* Server-side email handling with Resend
+* Vercel serverless API
+* Environment variables for protecting API credentials
 
 ## 🛠️ Technologies Used
 
-* React
-* Vite
-* JavaScript (ES6+)
+### Frontend
+
+* React.js
+* JavaScript
 * HTML5
 * CSS3
+* Vite
+
+### Tools & Libraries
+
 * React Icons
-* EmailJS
-* Git & GitHub
+* Git
+* GitHub
+* Vercel
+* Resend
 
----
-
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 react-portfolio/
+├── api/
+│   └── send-email.js
 ├── public/
 ├── src/
 │   ├── assets/
 │   ├── components/
-│   ├── data/
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Skills.jsx
+│   │   └── ThemeToggle.jsx
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
 │   └── main.jsx
 ├── .env
+├── .gitignore
 ├── package.json
-└── vite.config.js
+├── vite.config.js
+└── README.md
 ```
-
----
 
 ## ⚙️ Installation
 
@@ -88,52 +106,71 @@ Start the development server:
 npm run dev
 ```
 
----
+## 📧 Contact Form
 
-## 🔐 Environment Variables
+The contact form uses **Resend** through a Vercel serverless API endpoint.
 
-Create a `.env` file in the project root and add:
+The Resend API key is stored securely as an environment variable and is **not included in the frontend code or GitHub repository**.
+
+Create a `.env` file in the project root:
 
 ```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
+RESEND_API_KEY=your_resend_api_key
 ```
 
----
+For Vercel deployment, add the same variable through the project's **Environment Variables** settings.
 
-## 📸 Screenshots
+## 🔐 Security
 
-<img width="1342" height="603" alt="personal" src="https://github.com/user-attachments/assets/573b072a-d6aa-466a-9db1-2a1194a6ba57" />
+Sensitive credentials are stored using environment variables.
 
----
+The following files should never be committed:
 
-## 📈 Future Improvements
+```text
+.env
+.env.local
+```
 
-* Add project filtering
-* Add scroll animations
-* Improve accessibility
-* Add blog section
-* Add multilingual support
-* Improve SEO
-* Add unit tests
+The Resend API key is accessed server-side using:
 
----
+```javascript
+process.env.RESEND_API_KEY
+```
 
-## 👨‍💻 Author
+## 📱 Responsive Design
 
-**Duol Daniel Gatbel**
+The portfolio is designed to work across:
 
-* GitHub: https://github.com/duolgT
-* LinkedIn: https://www.linkedin.com/in/duol-daniel-gatbel-b659a3268/
-* Email: duolkuach100@gmail.com
+* Desktop computers
+* Laptops
+* Tablets
+* Mobile phones
 
----
+The navigation automatically adapts to smaller screens with a mobile hamburger menu.
+
+## 📌 Future Improvements
+
+Planned improvements include:
+
+* Adding more real-world projects
+* Improving accessibility
+* Adding project filtering
+* Adding a downloadable CV
+* Adding testimonials
+* Improving SEO
+* Adding additional animations and micro-interactions
+
+## 📬 Contact
+
+If you would like to discuss a project, collaboration, or frontend development opportunity, you can contact me through the portfolio website.
+
+**GitHub:** https://github.com/duolgT
+
+**Email:** [duolkuach100@gmail.com]
 
 ## 📄 License
 
-This project is licensed under the MIT License. Feel free to fork, modify, and use it for learning or personal portfolio purposes.
+This project is created for personal portfolio and professional showcase purposes.
 
----
-
-⭐ If you found this project useful, consider giving it a star on GitHub!
+```
+```
